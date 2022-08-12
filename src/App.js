@@ -1,5 +1,6 @@
 import "./App.css";
-import ExpenseItem from "./components/ExpenseItem";
+import Card from "./components/UI/Card";
+import ExpenseItem from "./components/Expenses/ExpenseItem";
 
 function App() {
   const expenses = [
@@ -24,8 +25,7 @@ function App() {
     },
   ];
   return (
-    <div className="App">
-      <h2>hello</h2>
+    <Card className="expenses">
       {expenses.map((expense) => (
         <ExpenseItem
           title={expense.title}
@@ -33,7 +33,7 @@ function App() {
           date={expense.date}
         />
       ))}
-    </div>
+    </Card>
   );
 }
 
