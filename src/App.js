@@ -1,6 +1,5 @@
 import "./App.css";
-import Card from "./components/UI/Card";
-import ExpenseItem from "./components/Expenses/ExpenseItem";
+import Expenses from "./components/Expenses/Expenses";
 
 function App() {
   const expenses = [
@@ -24,17 +23,7 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
-  return (
-    <Card className="expenses">
-      {expenses.map((expense) => (
-        <ExpenseItem
-          title={expense.title}
-          amount={expense.amount}
-          date={expense.date}
-        />
-      ))}
-    </Card>
-  );
+  return <Expenses expenses={expenses} />;
 }
 
 export default App;
