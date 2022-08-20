@@ -13,7 +13,6 @@ function ExpenseItems({ title, amount, date }) {
         </div>
         <div className="expense-item__price">{`${amount}`}</div>
       </div>
-      <button>change title</button>
     </Card>
   );
 }
